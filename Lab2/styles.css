@@ -1,7 +1,8 @@
 /* Flexbox Part 1 */
 
 #flex-section1 ul {
-
+	display: flex;
+	flex-direction: row;
 }
 
 /* end Flexbox Part 1 */
