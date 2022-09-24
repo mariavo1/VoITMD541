@@ -113,7 +113,7 @@
 }
 
 #grid-section3 .box3 {
-
+	grid-row: 2;
 }
 
 #grid-section3 .box4 {
