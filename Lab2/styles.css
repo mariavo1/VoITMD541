@@ -52,7 +52,11 @@
 }
 
 #flex-section3 .tags ul {
-	
+	display: flex;
+	list-style: none;
+	flex-direction: row;
+	margin: 0;
+	padding: 0;
 }
 
 /* end Flexbox Part 3 */
