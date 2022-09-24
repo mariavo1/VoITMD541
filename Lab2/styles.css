@@ -78,7 +78,12 @@
 /* Grid Part 2 */
 
 #grid-section2 .gridboxblue {
+	display: grid;
+	grid-template: repeat(3, 1fr);
+	grid-column: 2/4;
+	grid-row: 1/4;
 
+	
 }
 
 #grid-section2 .gridboxred {
