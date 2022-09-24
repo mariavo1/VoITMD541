@@ -5,9 +5,9 @@ body {
     background-color: lightgrey;
 }
 
-nav ul {
+ul {
     display: inline;
-    list-style: none;
+    list-style-type: none;
 }
 
 h1 {
