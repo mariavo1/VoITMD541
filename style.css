@@ -3,13 +3,26 @@
   }
 body {
     background-color: lightgrey;
+    margin: 0;
 }
 
-ul {
-    display: inline;
+nav ul {
+    display: flex;
     list-style-type: none;
+    padding: 10px;
+    font-size: 20px;
+    margin: 0;
+    background-color: darkgrey;
 }
 
+nav ul li a{
+    text-decoration: none;
+    color: white;
+}
+
+a:hover {
+    background-color:#000000 ;
+}
 h1 {
     text-align: center;
 }
