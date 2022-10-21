@@ -8,39 +8,42 @@
     <link rel="stylesheet" type="text/css" href="tipcalc.css">
 </head>
 <body>
-    <div id="main-content">
-        <h2>ITMD 541 - Lab 3 - Maria Vo</h2>
-        <h1>Tip Calculator</h1>
-
-        <form id="form">
-
-            <div class="form-controls">
-                <label for="billTotal">Bill Total:</label>
-                <input name="billTotal" id="billTotal" type="text" placeholder="Enter Total" required>
-            </div>
-
-            <div class="form-controls">
-                <label for="tip">Tip:</label>
-                <input name="tip" type="range" id="tips" min="0" max="100" value="0">
-            </div>
-            
-            <div class="form-controls">
-                <label for="tipPercentage">Tip Percentage:</label>
-                <input name="tipPercentage" id="tipPercentage" type="text" disabled>
-            </div>
-
-            <div class="form-controls">
-                <label for="tipAmount">Tip Amount:</label>
-                <input name="tipAmount" type="text" id="tipAmount" disabled>
-            </div>
-            
-            <div class="form-controls">
-                <label for="total">Total Bill with Tip:</label>
-                <input name="total" type="text" id="total" disabled>
-            </div>
-
-        </form>
+    <div id="grid">
+        <div id="main-content">
+            <h2>ITMD 541 - Lab 3 - Maria Vo</h2>
+            <h1>Tip Calculator</h1>
+    
+            <form id="form">
+    
+                <div class="form-controls">
+                    <label id="bill" for="billTotal">Bill Total:</label>
+                    <input name="billTotal" id="billTotal" type="text" placeholder="Enter Total" required>
+                </div>
+    
+                <div class="form-controls">
+                    <label for="tip">Tip:</label>
+                    <input name="tip" type="range" id="tips" min="0" max="100" value="0">
+                </div>
+                
+                <div class="form-controls">
+                    <label for="tipPercentage">Tip Percentage:</label>
+                    <input name="tipPercentage" id="tipPercentage" type="text" disabled>
+                </div>
+    
+                <div class="form-controls">
+                    <label for="tipAmount">Tip Amount:</label>
+                    <input name="tipAmount" type="text" id="tipAmount" disabled>
+                </div>
+                
+                <div class="form-controls">
+                    <label for="total">Total Bill with Tip:</label>
+                    <input name="total" type="text" id="total" disabled>
+                </div>
+    
+            </form>
+        </div>
     </div>
+    
 
     <script src="tipcalc.js"></script>
 </body>
