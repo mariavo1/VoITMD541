@@ -3,18 +3,18 @@
   }
 
 body {
-    display: grid;
+    display: flex;
     justify-content: center;
-    align-content: center;
   }
 
 #main-content {
     background-color: #ADD8E6;
-    max-width: 600px;
+    max-width: 650px;
     text-align: center;
     padding: 15px;
+    margin: 50px auto;
   }
-  
+
 .form-controls {
     padding: 5px;
 }
