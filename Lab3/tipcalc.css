@@ -3,14 +3,12 @@
   }
 
 body {
-    display: flex;
-    justify-content: center;
+    display: block;
   }
 
 #main-content {
     background-color: #ADD8E6;
     max-width: 650px;
-    text-align: center;
     padding: 15px;
     margin: 50px auto;
   }
@@ -19,3 +17,17 @@ body {
     padding: 5px;
     font-size: 18px;
 }
+
+h2 {
+    font-size: 18px;
+    text-align: center;
+}
+h1 {
+    text-align: center;
+}
+
+label {
+    font-weight: bold;
+    text-align: right;
+}
+
