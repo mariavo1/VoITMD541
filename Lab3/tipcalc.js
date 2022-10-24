@@ -9,5 +9,4 @@ document.querySelector('#form').onchange = function() {
     document.getElementById('tipPercentage').value = tip;
     document.getElementById('tipAmount').value = tipTotal.toFixed(2);
     document.getElementById('billAndTip').value = allTotal.toFixed(2);
-
 };
