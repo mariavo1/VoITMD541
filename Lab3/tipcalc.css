@@ -42,7 +42,7 @@ label {
     font-size: 20px;
 }
 
-@media screen and (max-width: 200px){
+@media screen and (max-width: 300px){
     #main-content {
         width: fit-content;
     }
@@ -52,6 +52,7 @@ label {
     #main-content {
         width: fit-content;
         margin-top: 40%;
+        padding: 10px;
     }
 }
 
