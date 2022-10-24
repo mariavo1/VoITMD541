@@ -30,4 +30,4 @@ document.querySelector('#form').onchange = function() {
         document.getElementById('billAndTip').value = allTotal.toFixed(2);
     }
 };
- //Only works after user moves the tip range?
+
