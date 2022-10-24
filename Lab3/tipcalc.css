@@ -47,6 +47,9 @@ label {
         width: fit-content;
         padding: 10px;
     }
+    h2 {
+        font-size: 18px;
+    }
 }
 
 @media screen and (min-width: 300px) and (max-width: 500px) {
@@ -55,6 +58,9 @@ label {
         margin-top: 40%;
         padding: 10px;
     }
+    h2 {
+        font-size: 18px;
+    }
 }
 
 @media screen and (min-width: 600px) and (max-width: 800px) {
@@ -62,12 +68,18 @@ label {
         width: fit-content;
         margin-top: 30%;
     }
+    h2 {
+        font-size: 18px;
+    }
 }
 
 @media screen and (min-width: 414px) and (max-width: 900px) {
     #main-content {
         width: fit-content;
         margin-top: 30%;
-        padding: 10px;
     }
+    h2 {
+        font-size: 18px;
+    }
+
 }
