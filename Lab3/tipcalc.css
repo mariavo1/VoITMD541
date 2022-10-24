@@ -41,5 +41,6 @@ label {
 @media screen and (min-width: 400px) and (max-width: 600px) {
     #main-content {
         width: fit-content;
+        margin-top: 40%;
     }
 }
