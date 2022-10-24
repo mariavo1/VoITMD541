@@ -42,13 +42,13 @@ label {
     font-size: 20px;
 }
 
-@media screen and (max-width: 300px){
+@media screen and (max-width: 400px){
     #main-content {
         width: fit-content;
     }
 }
 
-@media screen and (min-width: 300px) and (max-width: 600px) {
+@media screen and (min-width: 300px) and (max-width: 500px) {
     #main-content {
         width: fit-content;
         margin-top: 40%;
