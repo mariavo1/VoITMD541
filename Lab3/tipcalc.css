@@ -38,9 +38,22 @@ label {
     font-size: 20px;
 }
 
-@media screen and (min-width: 400px) and (max-width: 600px) {
+@media screen and (max-width: 300px){
+    #main-content {
+        width: fit-content;
+    }
+}
+
+@media screen and (min-width: 300px) and (max-width: 600px) {
     #main-content {
         width: fit-content;
         margin-top: 40%;
+    }
+}
+
+@media screen and (min-width: 600px) and (max-width: 800px) {
+    #main-content {
+        width: fit-content;
+        margin-top: 30%;
     }
 }
