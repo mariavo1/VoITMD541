@@ -42,10 +42,10 @@ label {
     font-size: 20px;
 }
 
-@media screen and (min-width: 150px) and (max-width: 300px){
+@media screen and (min-width: 150px) and (max-width: 360px){
     #main-content {
         width: fit-content;
-        padding: 5px;
+        padding: 10px;
     }
 }
 
@@ -61,5 +61,13 @@ label {
     #main-content {
         width: fit-content;
         margin-top: 30%;
+    }
+}
+
+@media screen and (min-width: 414px) and (max-width: 900px) {
+    #main-content {
+        width: fit-content;
+        margin-top: 30%;
+        padding: 10px;
     }
 }
