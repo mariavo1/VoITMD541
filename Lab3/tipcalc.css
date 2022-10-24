@@ -27,6 +27,10 @@ h2 {
     margin: auto;
 }
 
+p {
+    text-align: center;
+}
+
 .form-controls {
     padding: 5px;
 }
