@@ -1,5 +1,5 @@
 window.addEventListener('DOMContentLoaded', function(){
-    let bar = document.getElementById("searchBar");
+    let bar = document.getElementById("searchBar").value;
     let searchBtn = document.getElementById("search-btn");
     let geo = document.getElementById("geo-btn");
     let lat = 0;
@@ -25,6 +25,21 @@ window.addEventListener('DOMContentLoaded', function(){
             }
         })
         .catch();
+    }
+
+    function Search() {
+        if (bar === '') {
+            alert("City not found");
+        } else {
+            fetch("https://weatherdbi.herokuapp.com/data/weather/" + bar)
+            .then(function(res) {
+                if (!res.ok) {
+                    return res.json();
+                } else {
+                    alert("Reponse error");
+                }
+            })
+        }
     }
 
     function currentLocation() {
