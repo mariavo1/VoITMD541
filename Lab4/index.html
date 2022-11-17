@@ -12,8 +12,30 @@
             <h1>Weather Forecast</h1>
             <input type="text" placeholder="Search City or Lattitude,Longitude" id="searchBar">
             <p id="errorMsg"></p>
-            <button id="btn" type="submit">Search</button>
+            <button id="search-btn" type="submit">Search</button>
+            <button id="geo-btn" type="button">Geolocation</button>
         </div>
+
+        <div id="forecast">
+            <div id="todayForecast">
+                <h2>Today's Forecast</h2>
+                <h1 id="city"></h1>
+            </div>
+
+            <div>
+                <ul id="content">
+                    <li id="date"></li>
+                    <li id="img"></li>
+                    <li id="temp"></li>
+                    <li id="precipitation"></li>
+                    <li id="humid"></li>
+                    <li id="wind"></li>
+                </ul>
+
+            </div>
+        </div>
+
+
     </div>
 </body>
 </html>
