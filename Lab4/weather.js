@@ -12,6 +12,21 @@ window.addEventListener('DOMContentLoaded', function(){
         fetchApi(api);
     }
 
+    function fetchApi(api) {
+        fetch(api)
+        .then(function(res){
+            return res.json();
+        })
+        .then(function(response){
+            if (response.status === 'fail' && response.message == 'invalid query') {
+                alert("Not Found");
+            } else {
+                wforecast(response);
+            }
+        })
+        .catch();
+    }
+
     function currentLocation() {
         if (navigator.geolocation) {
             navigator.geolocation.getCurrentPosition(showPosition);
