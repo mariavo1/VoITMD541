@@ -2,6 +2,7 @@ window.addEventListener('DOMContentLoaded', function(){
     let bar = document.getElementById("searchBar").value;
     let searchBtn = document.getElementById("search-btn");
     let geo = document.getElementById("geo-btn");
+    let wContent = document.getElementById("weatherContent");
     let lat = 0;
     let long = 0;
 
@@ -40,6 +41,16 @@ window.addEventListener('DOMContentLoaded', function(){
                 }
             })
         }
+        .then(json => {
+            if(json.status){
+                wContent.innerHTML = "";
+
+            } else {
+                wforecast(json);
+        
+            }
+        })
+        
     }
 
     function currentLocation() {
