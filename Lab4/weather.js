@@ -4,6 +4,12 @@ window.addEventListener('DOMContentLoaded', function(){
     let geo = document.getElementById("geo-btn");
 
     function currentLocation() {
-        if
+        if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(showPosition);
+        } else {
+            alert("Turn on location");
+        }
     }
+
+    geo.addEventListener('click', currentLocation);
 }); //end
