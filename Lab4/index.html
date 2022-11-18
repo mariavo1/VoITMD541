@@ -10,12 +10,13 @@
 </head>
 <body>
     <div id="main-content"> 
-        <div id="textbox">
+        <div class='card'>
             <h1>Weather Forecast</h1>
-            <input type="text" placeholder="Search City or Lattitude,Longitude" id="searchBar">
-            <p id="errorMsg"></p>
-            <button id="search-btn" type="submit">Search</button>
-            <button id="geo-btn" type="button">Geolocation</button>
+            <input placeholder='City or Latitude,Longitude' type="text" name="total" id="loc" value=""> 
+            <p id="errMsg"></p>
+            <button id="loc-btn">Click for Current Location</button>
+    
+            <p id="curPosition"></p>
         </div>
 
         <div id="forecast">
