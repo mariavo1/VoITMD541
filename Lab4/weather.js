@@ -67,4 +67,12 @@ window.addEventListener('DOMContentLoaded', function(){
     }
 */
 
+    function currentLocation() {
+        if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(showPosition);
+        } else { 
+            r.innerHTML = "<h3>Geolocation not supported</h3>";
+        }
+    }
+    
 }); //end
