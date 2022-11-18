@@ -75,10 +75,20 @@ window.addEventListener('DOMContentLoaded', function(){
         }
     }
 
+    function Search(e){
+        if (loc.value == '') {
+            errMsg.innerHTML = '<p>Please enter into the search bar</p><button id="searchbtn" disabled>Disabled</button>'
+        }
+        else {
+            errMsg.innerHTML = '<button id="searchbtn">Search</button>'
+            searchbtn.addEventListener('click', WeatherCast);
+        }
+    }
+
     function showPosition(p) {
         loc.value = p.coords.latitude + "," + p.coords.longitude;
         Search();
         WeatherCast();
     }
-
+    
 }); //end
