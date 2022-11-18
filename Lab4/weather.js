@@ -91,7 +91,7 @@ window.addEventListener('DOMContentLoaded', function(){
         WeatherCast();
     }
 
-    loc.addEventListener('input', Search)
-    locbtn.addEventListener('click', currentLocation)
-    
+    loc.addEventListener('input', Search);
+    locbtn.addEventListener('click', currentLocation);
+
 }); //end
