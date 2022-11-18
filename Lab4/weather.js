@@ -6,11 +6,12 @@ window.addEventListener('DOMContentLoaded', function(){
     let lat;
     let long;
 
-    if (navigator.geolocation) {
-        navigator.geolocation.getCurrentPosition((position) => {
-            long = position.coords.longitude;
-            lat = position.coords.latitude;
-        });
+    function getLocation() {
+        if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(success, error);
+        } else {
+            alert ("Geolocation not supported");
+        }
     }
 /*
     function success(p) {
