@@ -74,5 +74,11 @@ window.addEventListener('DOMContentLoaded', function(){
             r.innerHTML = "<h3>Geolocation not supported</h3>";
         }
     }
-    
+
+    function showPosition(p) {
+        loc.value = p.coords.latitude + "," + p.coords.longitude;
+        Search();
+        WeatherCast();
+    }
+
 }); //end
