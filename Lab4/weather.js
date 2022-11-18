@@ -3,9 +3,16 @@ window.addEventListener('DOMContentLoaded', function(){
     let searchBtn = document.getElementById("search-btn");
     let geo = document.getElementById("geo-btn");
     let wContent = document.getElementById("weatherContent");
-    let lat = 0;
-    let long = 0;
+    let lat;
+    let long;
 
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition((position) => {
+            long = position.coords.longitude;
+            lat = position.coords.latitude;
+        });
+    }
+/*
     function success(p) {
         lat = p.coords.latitude;
         long = p.coords.longitude;
@@ -62,4 +69,5 @@ window.addEventListener('DOMContentLoaded', function(){
     }
 
     geo.addEventListener('click', currentLocation);
+*/
 }); //end
