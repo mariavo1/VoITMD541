@@ -119,3 +119,32 @@ h1, h2 {
         font-size: 26px;
     }
 }
+
+@media screen and (min-width: 1201px) {
+    h1 {
+        font-size: 42px;
+    }
+    h2 {
+        font-size: 32px;
+    }
+    p {
+        font-size: 24px;
+    }
+    #loc-btn {
+        width: 350px;
+        font-size: 16px;
+    }
+    #searchbtn {
+        width: 250px;
+        font-size: 16px;
+    }
+    #loc {
+        width: 255px;
+        font-size: 16px;
+    }
+    #day {
+        font-size: 28px;
+    }
+  
+}
+
