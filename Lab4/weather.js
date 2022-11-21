@@ -1,4 +1,4 @@
-window.addEventListener('DOMContentLoaded', function(){ 
+window.addEventListener('DOMContentLoaded', function(){
 
     let locbtn = this.document.getElementById("loc-btn")
     let loc = document.getElementById("loc");
@@ -6,7 +6,8 @@ window.addEventListener('DOMContentLoaded', function(){
 
     if (loc.value == '') {
         errMsg.innerHTML = '<p>Please enter into the search bar</p><button id="searchbtn" disabled>Disabled</button>'
-    } else {
+    }
+    else {
         errMsg.innerHTML = '<button id="searchbtn">Search</button>'
     }
 
@@ -22,8 +23,8 @@ window.addEventListener('DOMContentLoaded', function(){
                 let tForecast = ""
                 tForecast+= "<div class='wForecast'>"
                 tForecast+= "<h3 id='day'>" + jsonData.currentConditions.dayhour + "</h3>"
-                tForecast+= "<p id='icon'>"+ jsonData.currentConditions.comment +"<img src=" + jsonData.currentConditions.iconURL   + "></p>"
-                tForecast+= "<p id='temp'>Temperature: " + jsonData.currentConditions.temp.f + "°F, Humidity: " +    jsonData.currentConditions.humidity + ", Wind: " + jsonData.currentConditions.wind.mile +  " mph</p>"
+                tForecast+= "<p id='iconURL'>"+ jsonData.currentConditions.comment +"<img src=" + jsonData.currentConditions.iconURL   + "></p>"
+                tForecast+= "<p id='temp'>Temperature: " + jsonData.currentConditions.temp.f + "°F, Humidity: " +    jsonData.currentConditions.humidity + ", Wind: " + jsonData.currentConditions.wind.mile +  " mile</p>"
                 tForecast+= "</div>"  
 
                 document.getElementById("currentTemp").innerHTML = tForecast;
@@ -40,10 +41,14 @@ window.addEventListener('DOMContentLoaded', function(){
                     nextForecast+= "<h3 id='day'>" + seven.day + "</h3>"
                     nextForecast+= "<p id='icon'>"+ seven.comment +"<img src=" + seven.iconURL   + "></p>"
                     nextForecast+= "<p id='maxmin'>" + seven.max_temp.f + "°F  / " +  seven.min_temp.f + "°F</p>"
-                    nextForecast+= "</div>"                    
+                    nextForecast+= "</div>"                           
+
                 }
-                    document.getElementById("nextTemp").innerHTML = nextForecast;
-            } else {
+                
+                document.getElementById("nextTemp").innerHTML = nextForecast;
+            }
+
+            else {
                 let r = document.getElementById("region");
                 r.innerHTML = '<h3> Error  : ' + jsonData.message + ' </h3>';
                 document.getElementById("currentTemp").innerHTML = "";
@@ -52,6 +57,30 @@ window.addEventListener('DOMContentLoaded', function(){
             
         })
         .catch(error => console.log(error));
+    }
+
+    function currentLocation() {
+        if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(showPosition);
+        } else { 
+            r.innerHTML = "<h3>Geolocation not supported</h3>";
+        }
+    }
+    
+    function showPosition(p) {
+        loc.value = p.coords.latitude + "," + p.coords.longitude;
+        Search();
+        WeatherCast();
+    }
+
+    function Search(e){
+        if (loc.value == '') {
+            errMsg.innerHTML = '<p>Please enter into the search bar</p><button id="searchbtn" disabled>Disabled</button>'
+        }
+        else {
+            errMsg.innerHTML = '<button id="searchbtn">Search</button>'
+            searchbtn.addEventListener('click', WeatherCast);
+        }
     }
 /*
     function loadingGif() {
@@ -66,32 +95,7 @@ window.addEventListener('DOMContentLoaded', function(){
         document.getElementById("gifImg").style.display = 'none';
     }
 */
-
-    function currentLocation() {
-        if (navigator.geolocation) {
-            navigator.geolocation.getCurrentPosition(showPosition);
-        } else { 
-            r.innerHTML = "<h3>Geolocation not supported</h3>";
-        }
-    }
-
-    function Search(e){
-        if (loc.value == '') {
-            errMsg.innerHTML = '<p>Please enter into the search bar</p><button id="searchbtn" disabled>Disabled</button>'
-        }
-        else {
-            errMsg.innerHTML = '<button id="searchbtn">Search</button>'
-            searchbtn.addEventListener('click', WeatherCast);
-        }
-    }
-
-    function showPosition(p) {
-        loc.value = p.coords.latitude + "," + p.coords.longitude;
-        Search();
-        WeatherCast();
-    }
-
-    loc.addEventListener('input', Search);
-    locbtn.addEventListener('click', currentLocation);
-
+    loc.addEventListener('input', Search)
+    locbtn.addEventListener('click', currentLocation)
+    
 }); //end
