@@ -39,7 +39,7 @@ window.addEventListener('DOMContentLoaded', function(){
                     nextForecast+= "<div class='wForecast'>"
                     nextForecast+= "<h3 id='day'>" + seven.day + "</h3>"
                     nextForecast+= "<p id='icon'>"+ seven.comment +"<img src=" + seven.iconURL   + "></p>"
-                    nextForecast+= "<p id='maxmin'> Max Temp: " + seven.max_temp.f + "°F , Min Temp: " +  seven.min_temp.f + "°F</p>"
+                    nextForecast+= "<p id='maxmin'>" + seven.max_temp.f + "°F  / " +  seven.min_temp.f + "°F</p>"
                     nextForecast+= "</div>"                    
                 }
                     document.getElementById("nextTemp").innerHTML = nextForecast;
