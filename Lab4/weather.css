@@ -21,6 +21,7 @@ body {
     width: 200px;
     text-align: center;
     padding: 5px;
+    border-radius: 8px;
 }
 
 #errMsg {
@@ -31,11 +32,13 @@ body {
 #searchbtn {
     padding: 5px;
     width: 100px;
+    border-radius: 8px;
 }
 
 #loc-btn {
     padding: 5px;
     background-color: #64FF6A;
+    border-radius: 8px;
 }
 .wForecast {
     display: flex;
