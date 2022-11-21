@@ -1,0 +1,53 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #FFFBCA;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    background-image: url("blue.jpeg");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+#loc {
+    width: 200px;
+    text-align: center;
+    padding: 5px;
+}
+
+#errMsg {
+    text-align: center;
+    padding: 10px;
+}
+
+#searchbtn {
+    padding: 5px;
+    width: 100px;
+}
+
+#loc-btn {
+    padding: 5px;
+    background-color: #64FF6A;
+}
+.wForecast {
+    display: flex;
+    justify-content: space-evenly;
+    background-color: #87CEFA	;
+    width: 100%;
+    margin: auto;
+    padding: 10px;
+    border-bottom: 2px dashed #F8EC1D;
+}
+
+h1, h2 {
+    text-align: center;
+    padding: 10px;
+}
