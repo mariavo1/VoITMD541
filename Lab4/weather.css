@@ -73,3 +73,22 @@ h1, h2 {
         padding-right: 5px;
     }
 }
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    h1 {
+        font-size: 34px;
+    }
+    h2 {
+        font-size: 28px;
+    }
+    p {
+        font-size: 20px;
+    }
+    #loc-btn {
+        width: 270px;
+    }
+    #day {
+        font-size: 24px;
+        padding: 10px;
+    }
+}
